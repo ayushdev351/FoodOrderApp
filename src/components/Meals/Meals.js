@@ -7,6 +7,7 @@ function Meals() {
   return (
     <>
       <MealsSummary />
+
       <AvailaibleMeals />
     </>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import MealItem from "./MealItem.js";
+
 const Data_Meals = [
   {
     id: "m1",
@@ -29,7 +31,14 @@ const Data_Meals = [
 ];
 
 function AvailaibleMeals() {
-  const mealsList = Data_Meals.map((Data_Meal) => <li>{Data_Meal.name}</li>);
+  const mealsList = Data_Meals.map((Data_Meal) => (
+    <MealItem
+      id={Data_Meal.id}
+      name={Data_Meal.name}
+      description={Data_Meal.description}
+      price={Data_Meal.price}
+    />
+  ));
 
   return (
     <Meals>
